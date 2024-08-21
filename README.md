@@ -1,8 +1,8 @@
-# URL Shortener Service
+# GitHub Repository Observer Service
 
 ### Overview
 
-This project is a service built with Java, Spring Boot, PostgreSQL, and Kafka. It provides an API to add GitHub repositories for monitoring, manage expiration, and list all observed repositories.
+This project is a service built with Java, Spring Boot, PostgreSQL, and Kafka. It provides an API to add GitHub repositories for monitoring, manage expiration, and list all observed repositories. A scheduler periodically syncs the repositories by fetching the latest data from the GitHub API.
 
 ### Prerequisites
 
