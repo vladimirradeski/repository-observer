@@ -1,8 +1,8 @@
-# GitHub Repository Observer Service
+# GitHub Repository Observer
 
 ### Overview
 
-This project is a service built with Java, Spring Boot, PostgreSQL, and Kafka. It provides an API to add GitHub repositories for monitoring, manage expiration, and list all observed repositories. A scheduler periodically syncs the repositories by fetching the latest data from the GitHub API.
+This project is a service built with Java, Spring Boot, PostgreSQL, and Kafka. It provides an API to add GitHub repositories for monitoring, manage expiration, and list all observed repositories. A scheduler periodically syncs the repositories by fetching the latest data from the GitHub API, and whenever a repository is synced, a domain event is published using Kafka.
 
 ### Prerequisites
 
@@ -15,7 +15,7 @@ Before getting started, make sure you have the following installed:
 
 **Build and run:**:
    ```bash
-   ./mvnw clean install
+   ./mvnw clean install -DskipTests=true
    ./mvnw spring-boot:run
    ```
 
@@ -42,7 +42,7 @@ The following properties can be configured in `application-docker.properties`:
 
 ### Swagger Documentation
 
-When the `observed-repos-api` service is started, Swagger documentation is available at:
+When the service is started, Swagger documentation is available at:
 - [Swagger UI](http://localhost:8080/swagger-ui/index.html)
 
 ### Kafka UI
